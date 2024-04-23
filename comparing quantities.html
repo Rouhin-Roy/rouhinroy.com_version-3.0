@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Comparing quantities</title>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="div.css">
+     </head>
+     <body>
+          <MARQUEE direction="right" scrollamount="10"><b><u><h1>Comparing quantities</h1></u></b></MARQUEE>
+          <hr>
+          <center>
+                <div id="container">
+                    <center><h1>fractions conversion: </h1></center><br>
+                    <label for="a">Enter the numerator: </label><br>
+                    <input type="text" id="a" value="0"><br>
+                    <label for="b">Enter the denominator: </label><br>
+                    <input type="text" id="b" value="0"><br>
+                    <label for="result1">The result: </label><br>
+                    <input type="text" id="result1" value="0" readonly><br>
+                    <input type="button" value="convert to decimal" onclick="ftd()">
+                    <input type="button" value="reset" onclick="reset1()">
+                </div><br><br>
+                <div id="container">
+                  <center><h1>percentage conversion: </h1></center><br>
+                  <label for="c">Enter the percentage: </label><br>
+                  <input type="text" id="c" value="0"><br>
+                  <label for="result2">The result: </label><br>
+                  <input type="text" id="result2" value="0" readonly><br>
+                  <input type="button" value="convert to decimal" onclick="ptd()">
+                  <input type="button" value="reset" onclick="reset2()">
+                  <input type="button" value="reset all" onclick="resetall()">
+                </div><br>
+                <button onclick="document.location='index.html'">Home</button>
+                <button onclick="document.location='Class 7.html'">Class 7</button>
+                <script>
+                       function ftd()
+                       {
+                          var n = Number(document.getElementById("a").value);
+                          var d = Number(document.getElementById("b").value);
+                          if (d == 0)
+                          {
+                            const RESULT1 = String("invalid input");
+                            document.getElementById("result1").value= String(RESULT1);
+                          }
+                          else
+                          {
+                            var RESULT1 = Number(document.getElementById("result1").value);
+                            RESULT1 = n / d;
+                            document.getElementById("result1").value= String(RESULT1);
+                          }
+                       }
+                       function ftp()
+                       {
+                          var n = Number(document.getElementById("a").value);
+                          var d = Number(document.getElementById("b").value);
+                          if (d == 0)
+                          {
+                            const RESULT1 = String("invalid input");
+                            document.getElementById("result1").value= String(RESULT1);
+                          }
+                          else
+                          {
+                            var RESULT1 = Number(document.getElementById("result").value);
+                            var RESULT2 = n / d;
+                            RESULT1 = RESULT2 * 100;
+                            document.getElementById("result1").value= String(RESULT1);
+                          }
+                       }
+                       function reset1()
+                       {
+                         document.getElementById("a").value="0";
+                         document.getElementById("b").value="0";
+                         document.getElementById("result").value="0";
+                       }
+                       function ptd()
+                       {
+                         var p = Number(document.getElementById("c").value);
+                         var RESULT2 = Number(document.getElementById("result2").value);
+                         RESULT2 = p / 100;
+                         document.getElementById("result2").value= String(RESULT2);
+                       }
+                       function reset2()
+                       {
+                         document.getElementById("c").value="0";
+                         document.getElementById("result2").value="0";
+                       }
+                       function resetall()
+                       {
+                         document.getElementById("a").value="0";
+                         document.getElementById("b").value="0";
+                         document.getElementById("result").value="0";
+                         document.getElementById("c").value="0";
+                         document.getElementById("result2").value="0";
+                       }
+                </script>
+          </center>
+     </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Integers</title>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="div.css">
+     </head>
+     <body>
+          <MARQUEE direction="right" scrollamount="10"><b><u><h1>Integers</h1></u></b></MARQUEE>
+          <hr>
+          <center>
+                 <div id="container">
+                      <label for="x">Enter the first number</label><br>
+                      <input type="text" id="x" value="0"><br>
+                      <label for="y">Enter the second number</label><br>
+                      <input type="text" id="y" value="0"><br>
+                      <label for="Sum">The result</label><br>
+                      <input type="text" id="Sum" value="0" readonly><br>
+                      <input type="button" value="Add" onclick="add()">
+                      <input type="button" value="Subtract" onclick="subtract()">
+                      <input type="button" value="Multiply" onclick="multiply()">
+                      <input type="button" value="Divide" onclick="divide()">
+                      <input type="button" value="Reset" onclick="reset()">                
+                 </div>
+                 <br>
+                 <button onclick="document.location='index.html'">Home</button>
+                      <button onclick="document.location='Class 7.html'">Class 7</button>
+                 <script>
+                        function reset()
+                        {
+                            document.getElementById("x").value="0";
+                            document.getElementById("y").value="0";
+                            document.getElementById("Sum").value=0;
+                        }
+                        function add()
+                        {
+                            var num1 = Number(document.getElementById("x").value);
+                            var num2 = Number(document.getElementById("y").value);
+                            var sum  = num1 + num2;
+                            document.getElementById("Sum").value= String(sum);
+                        }
+                        function subtract()
+                        {
+                            var num1 = Number(document.getElementById("x").value);
+                            var num2 = Number(document.getElementById("y").value);
+                            var sum  = num1 - num2;
+                            document.getElementById("Sum").value= String(sum);
+                        }
+                        function multiply()
+                        {
+                            var num1 = Number(document.getElementById("x").value);
+                            var num2 = Number(document.getElementById("y").value);
+                            var sum  = num1 * num2;
+                            document.getElementById("Sum").value= String(sum);
+                        }
+                        function divide()
+                        {
+                            var num1 = Number(document.getElementById("x").value);
+                            var num2 = Number(document.getElementById("y").value);
+                            if (num2 == 0)
+                            {
+                                const sum = String("invalid input");
+                                document.getElementById("Sum").value= String(sum);
+                            }
+                            else
+                            {
+                                var sum  = num1 / num2;
+                                document.getElementById("Sum").value= String(sum);
+                            }
+                        }    
+                 </script>
+          </center>
+     </body>
+</html>

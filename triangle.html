@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Triangle and it's properties</title>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="div.css">
+     </head>
+     <body>
+        <MARQUEE direction="right" scrollamount="10"><b><u><h1>Triangle and it's properties</h1></u></b></MARQUEE>
+        <hr>
+        <center>
+               <div id="container">
+                    <center>Third angle</center>
+                    <label for="x">Enter the first angle: </label><br>
+                    <input type="text" id="x" value="0"><br>
+                    <label for="y">Enter the second angle: </label><br>
+                    <input type="text" id="y" value="0"><br>
+                    <label for="ang">The third angle: </label><br>
+                    <input type="text" id="ang" value="0" readonly><br>
+                    <input type="button" value="Third angle" onclick="angle()">
+                    <input type="button" value="reset" onclick="reset1()">
+               </div><br><br>
+               <div id="container">
+                <center>Exterior and interior angle</center>
+                  <label for="a">Enter the angle: </label><br>
+                  <input type="text" id="a" value="0"><br>
+                  <label for="b">Interior angle: </label><br>
+                  <input type="text" id="b" value="0" readonly><input type="button" value="Interior angle" onclick="intang()"><br>
+                  <label for="c">Exterior angle: </label><br>
+                  <input type="text" id="c" value="0" readonly><input type="button" value="Exterior angle" onclick="extang()"><br>
+                  <input type="button" value="reset" onclick="reset2()">
+                  <input type="button" value="reset all" onclick="resetall()">
+               </div>
+               <br>
+               <button onclick="document.location='index.html'">Home</button>
+               <button onclick="document.location='class 7.html'">Class 7</button>
+               <script>
+                      function angle()
+                      {
+                        var X= Number(document.getElementById("x").value);
+                        var Y= Number(document.getElementById("y").value);
+                        var sum= X + Y;
+                        if (sum >= 180 || sum < 1)
+                        {
+                          var ANG= 180 - sum;
+                          document.getElementById("ang").value= String(ANG);
+                        }
+                        else
+                        {
+                          const ANG= String("Invalid input");
+                          document.getElementById("ang").value= String(ANG);
+                        }
+                        
+                      }  
+                      function intang()
+                      {
+                        var A= Number(document.getElementById("a").value);
+                        if (A < 180)
+                        {
+                            var INTANG= 180 - A;
+                            document.getElementById("b").value= String(INTANG);
+                        }
+                        else
+                        {
+                            const INTANG= String("Invalid input") 
+                            document.getElementById("b").value= String(INTANG);
+                        }
+                      }
+                      function extang()
+                      {
+                        var A= Number(document.getElementById("a").value);
+                        if (A < 180)
+                        {
+                            var EXTANG= 180 - A;
+                            document.getElementById("c").value= String(EXTANG);
+                        }
+                        else
+                        {
+                            const EXTANG= String("Invalid input") 
+                            document.getElementById("c").value= String(EXTANG);
+                        }
+                      }
+                      function reset1()
+                      {
+                        document.getElementById("x").value="0";
+                        document.getElementById("y").value="0";
+                        document.getElementById("ang").value="0";
+                      }
+                      function reset2()
+                      {
+                        document.getElementById("a").value="0";
+                        document.getElementById("b").value="0";
+                        document.getElementById("c").value="0";
+                      }
+                      function resetall()
+                      {
+                        document.getElementById("x").value="0";
+                        document.getElementById("y").value="0";
+                        document.getElementById("ang").value="0";
+                        document.getElementById("a").value="0";
+                        document.getElementById("b").value="0";
+                        document.getElementById("c").value="0";
+                      }
+               </script>
+        </center>
+     </body>
+</html>

@@ -1,0 +1,49 @@
+body
+{
+    height: fit-content; 
+    background-image: url('A_1.jpeg');
+    background-repeat: no-repeat;
+}
+button 
+{
+    padding: 10px 20px;
+    background-color: #09e748;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 20px; 
+    box-shadow: 0 2px 4px rgb(21, 115, 82);
+}
+h2
+{
+    padding: 10px 20px;
+    background-color: #0deb6dad;
+    color: rgba(10, 0, 95, 0.886);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: px; 
+    box-shadow: 0 2px 4px rgb(21, 115, 82);
+    width: fit-content;
+}
+nav
+{
+    background-image: linear-gradient(rgba(3, 167, 255, 0.615),rgb(203, 29, 203));
+    
+}
+#container
+{
+    background-image: linear-gradient(rgb(11, 223, 8),rgba(213, 213, 10, 0.74));
+    border: 5px;
+    border-color: blue;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 5px rgb(21, 115, 82);
+    opacity: 92%;
+    width: fit-content;
+    height: fit-content;
+}
+MARQUEE
+{
+    color: rgb(34, 149, 221);
+}

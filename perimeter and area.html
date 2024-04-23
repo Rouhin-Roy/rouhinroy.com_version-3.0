@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>perimeter & area</title>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="div.css">
+     </head>
+     <body>
+          <MARQUEE direction="right" scrollamount="10"><b><u><h1>perimeter & area</h1></u></b></MARQUEE>
+          <hr>
+          <center>
+                 <div id="container">
+                     <center><h1>Square</h1></center>
+                     <label for="ss">Enter the side of the square: </label><br>
+                     <input type="text" id="ss" value="0"><br>
+                     <label for="sa">The result: </label><br>
+                     <input type="text" id="sa" value="0" readonly><br>
+                     <input type="button" value="area" onclick="sa()">
+                     <input type="button" value="perimeter" onclick="sp()"><br>
+                     <input type="button" value="reset" onclick="sreset()">
+                 </div>
+                 <div id="container">
+                    <center><h1>Rectangle</h1></center>
+                    <label for="rl">Enter the length of the rectangle: </label><br>
+                    <input type="text" id="rl" value="0"><br>
+                    <label for="rb">Enter the length of the rectangle: </label><br>
+                    <input type="text" id="rb" value="0"><br>
+                    <label for="ra">The result: </label><br>
+                    <input type="text" id="ra" value="0" readonly><br>
+                    <input type="button" value="area" onclick="ra()">
+                    <input type="button" value="perimeter" onclick="rp()"><br>
+                    <input type="button" value="reset" onclick="rreset()">
+                </div>
+                <div id="container">
+                    <center><h1>Triangle</h1></center>
+                    <label for="th">Enter the height of the triangle: </label><br>
+                    <input type="text" id="th" value="0"><br>
+                    <label for="tb">Enter the base of the triangle: </label><br>
+                    <input type="text" id="tb" value="0"><br>
+                    <label for="ta">The result: </label><br>
+                    <input type="text" id="ta" value="0" readonly><br>
+                    <input type="button" value="area" onclick="ta()">
+                    <input type="button" value="reset" onclick="treset()">
+                </div>
+                <div id="container">
+                    <center><h1>Circle</h1></center>
+                    <label for="cr">Enter the radius of the circle: </label><br>
+                    <input type="text" id="cr" value="0"><br>
+                    <label for="ca">The result: </label><br>
+                    <input type="text" id="ca" value="0" readonly><br>
+                    <input type="button" value="area" onclick="ca()">
+                    <input type="button" value="circumference" onclick="cc()"><br>
+                    <input type="button" value="reset" onclick="creset()">
+                    <input type="button" value="reset all" onclick="areset()">
+                </div>
+                <br>
+                <button onclick="document.location='index.html'">Home</button>
+                <button onclick="document.location='Class 7.html'">Class 7</button>
+          </center>
+          <script>
+                 function sa()
+                 {
+                    var SS = Number(document.getElementById("ss").value);
+                    var SA = Number(document.getElementById("sa").value);
+                    if (SS < 0)
+                    {
+                        const SA = String("invalid input");
+                        document.getElementById("sa").value= String(SA);
+                    }
+                    else
+                    {
+                        SA = SS * SS;
+                        document.getElementById("sa").value= String(SA);
+                    }
+                 }
+                 function sp()
+                 {
+                    var SS = Number(document.getElementById("ss").value);
+                    var SP = Number(document.getElementById("sa").value);
+                    if (SS < 0)
+                    {
+                        const SP = String("invalid input");
+                        document.getElementById("sa").value= String(SP);
+                    }
+                    else
+                    {
+                        SP = SS * 4;
+                        document.getElementById("sa").value= String(SP);
+                    }
+                 }
+                 function sreset()
+                 {
+                    document.getElementById("ss").value="0";
+                    document.getElementById("sa").value="0";
+                 }
+                 function ra()
+                 {
+                    var RL = Number(document.getElementById("rl").value);
+                    var RB = Number(document.getElementById("rb").value);
+                    var RA = Number(document.getElementById("ra").value);
+                    if (RL < 0 ||  RB < 0)
+                    {
+                        const RA = String("invalid input");
+                        document.getElementById("ra").value= String(RA);
+                    }
+                    else
+                    {
+                        RA = RL * RB;
+                        document.getElementById("ra").value= String(RA);
+                    }
+                 }
+                 function rp()
+                 {
+                    var RL = Number(document.getElementById("rl").value);
+                    var RB = Number(document.getElementById("rb").value);
+                    var RP = Number(document.getElementById("ra").value);
+                    if (RL < 0 || RB < 0) 
+                    {
+                        const RP = String("invalid input");
+                        document.getElementById("ra").value= String(RP);
+                    }
+                    else
+                    {
+                        RP = 2 * (RL + RB);
+                        document.getElementById("ra").value= String(RP);
+                    }
+                 }
+                 function ca()
+                 {
+                    var R=  Number(document.getElementById("cr").value);
+                    var CA= Number(document.getElementById("ca").value);
+                    if (R < 0)
+                    {
+                        const CA = String("invalid input");
+                        document.getElementById("ca").value= String(RP)
+                    }
+                    else
+                    {
+                        CA = (22/7) * R * R;
+                        document.getElementById("ca").value= String(CA)
+                    }
+                 }
+                 function cc()
+                 {
+                    var R=  Number(document.getElementById("cr").value);
+                    var CC= Number(document.getElementById("ca").value);
+                    if (R < 0)
+                    {
+                        const CC = String("invalid input");
+                        document.getElementById("ca").value= String(RP)
+                    }
+                    else
+                    {
+                        CC = 2 * (22/7) * R;
+                        document.getElementById("ca").value= String(CA)
+                    }
+                 }
+                 function ta()
+                 {
+                    var TB = Number(document.getElementById("tb").value);
+                    var TH = Number(document.getElementById("th").value);
+                    var TA = Number(document.getElementById("ta").value);
+                    if (TB < 0 && TH < 0)
+                    {
+                        const TA= String("invalid input");
+                        document.getElementById("ta").value= String(TA);
+                    }
+                    else
+                    {
+                        TA = (1/2) * TB * TH;
+                        document.getElementById("ta").value= String(TA);
+                    }
+
+                 }
+                 function treset()
+                 {
+                    document.getElementById("tb").value="0;"
+                    document.getElementById("th").value="0;"
+                    document.getElementById("ta").value="0;"
+                 }
+                 function creset()
+                 {
+                    document.getElementById("cr").value="0;"
+                    document.getElementById("ca").value="0;"
+                 }
+                 function rreset()
+                 {
+                    document.getElementById("rl").value="0";
+                    document.getElementById("rb").value="0";
+                    document.getElementById("ra").value="0";
+                 }
+                 function areset()
+                 {
+                    document.getElementById("ss").value="0";
+                    document.getElementById("sa").value="0";
+                    document.getElementById("tb").value="0;"
+                    document.getElementById("th").value="0;"
+                    document.getElementById("ta").value="0;"
+                    document.getElementById("cr").value="0;"
+                    document.getElementById("ca").value="0;"
+                    document.getElementById("rl").value="0";
+                    document.getElementById("rb").value="0";
+                    document.getElementById("ra").value="0";
+                 }
+          </script>
+     </body>
+</html>

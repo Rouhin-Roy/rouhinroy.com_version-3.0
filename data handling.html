@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Data Handling</title>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="div.css">
+     </head>
+     <body>
+        <MARQUEE direction="right" scrollamount="10"><b><u><h1>Data Handling</h1></u></b></MARQUEE>
+        <hr>
+        <center>
+               <div id="container">
+                    <center><h2>Mean</h2></center>
+                    <label for="x">Enter the number of observations: </label><br>
+                    <input type="text" id="x" value="0"><br>
+                    <label for="y">Enter the observations(one by one): </label><br>
+                    <input type="text" id="y" value="0"><input type="button" value="Next observations" onclick="next()"><br>
+                    <label for="sum">Sum of the Numbers: </label>
+                    <input type="text" id="sum" value="0" readonly><br>
+                    <label for="no">Number of observations entered so far</label>
+                    <input type="text" id="no" value="0" readonly><br>
+                    <label for="mean">Mean: </label><br>
+                    <input type="text" id="mean" value="0" readonly><br>
+                    <input type="button" value="Mean" onclick="mean()">
+               </div><br>
+               <button onclick="document.location='index.html'">Home</button>
+               <button onclick="document.location='class 7.html'">Class 7</button>
+        </center>
+        <script>
+               function next()
+               {
+                    var X= Number(document.getElementById("x").value);
+                    var NO= Number(document.getElementById("no").value);
+                    if (NO < X)
+                    {
+                        var num= Number(document.getElementById("y").value);             
+                        var SUM=Number(document.getElementById("sum").value);
+                        SUM= SUM + num;
+                        document.getElementById("sum").value= String(SUM);
+                        document.getElementById("y").value="0"; 
+                        NO= NO + 1;
+                        document.getElementById("no").value= String(NO);
+                    }
+                    else 
+                    {
+
+                    }
+               }
+               function mean()
+               {
+                  var SUM= Number(document.getElementById("sum").value);
+                  var X= Number(document.getElementById("x").value);
+                  var MEAN= SUM / X;
+                  document.getElementById("mean").value= String(MEAN);
+               }
+        </script>
+     </body>
+</html>

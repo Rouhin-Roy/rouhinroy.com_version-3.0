@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Lines and angles</title>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="div.css">
+     </head>
+     <body>
+        <MARQUEE direction="right" scrollamount="10"><b><u><h1>Lines and angles</h1></u></b></MARQUEE>
+        <hr>
+        <center>
+               <div id="container">
+                    <center>Lines and angles</center>
+                    <label for="x">Enter the angle: </label><br>
+                    <input type="text" id="x" value="0"><br>
+                    <input type="button" value="Complementary Angle" onclick="com()"><input type="button" value="Supplementary Angle" onclick="sum()"><br>
+                    <label for="com">The Complementary angle is: </label><br>
+                    <input type="text" id="com" value="0" readonly><br>
+                    <label for="sum">The Supplementary angle is: </label><br>
+                    <input type="text" id="sum" value="0" readonly><br>
+                    <input type="button" value="reset" onclick="reset()">
+               </div><br>
+               <button onclick="document.location='index.html'">Home</button>
+               <button onclick="document.location='class 7.html'">Class 7</button>
+               <script>
+                      function com()
+                      {
+                        var X= Number(document.getElementById("x").value);
+                        if (X <= 90)
+                        {
+                            var COM= 90 - X;
+                            document.getElementById("com").value= String(COM);
+                        }
+                        else
+                        {
+                            const COM= String("Invalid input") 
+                            document.getElementById("com").value= String(COM);
+                        }
+                      }  
+                      function sum()
+                      {
+                        var X= Number(document.getElementById("x").value);
+                        if (X <= 180)
+                        {
+                            var SUM= 180 - X;
+                            document.getElementById("sum").value= String(SUM);
+                        }
+                        else
+                        {
+                            const SUM= String("Invalid input") 
+                            document.getElementById("sum").value= String(SUM);
+                        }
+                      }
+                      function reset()
+                      {
+                        document.getElementById("x").value="0";
+                        document.getElementById("com").value="0";
+                        document.getElementById("sum").value="0";
+                      }
+               </script>
+        </center>
+     </body>
+</html>
